@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ong reconhecer e cuidar</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.htm"><img src="logo/logofinal.png" alt="Logo da ONG Reconhecer e Cuidar" width="350"></a>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.htm">Inicio</a></li>
+
+                    <li class="dropdown"> <a href="javascript:void(0);">Projeto</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projetos.html">Visão Geral dos Projetos</a></li>
+                            <li><a href="#">Nossa História</a></li>
+                            <li><a href="#">Nossa Equipa</a></li>
+                            <li><a href="transparencia.html">Transparência</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cadastro.html">Seja voluntario</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-hamburguer" aria-label="Abrir menu">
+                <span class="hamburguer-linha"></span>
+                <span class="hamburguer-linha"></span>
+                <span class="hamburguer-linha"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-intro">
+            <h1>Faça parte do nosso projeto</h1>
+            <h2> Já imaginou um Brasil sem abandono de cães e gatos?
+                Nossa ONG nasceu para transformar essa realidade – e precisamos de pessoas que acreditem que amor,
+                cuidado e responsabilidade fazem diferença.
+                Se você também acredita nisso, venha caminhar conosco. 🐾
+                Junte-se à nossa rede de proteção animal.</h2>
+        </div>
+
+        <form id="form-cadastro">
+
+            <div id="form-errors" class="erros-validacao" style="display: none;">
+                </div>
+
+            <legend class="form-container">Informações Pessoais</legend>
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com.br">
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="(XX) XXXXX-XXXX">
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="18" max="99">
+
+            <label for="experiencia"> Você tem experiência com cães e gatos?</label>
+            <select id="experiencia" name="experiencia">
+                <option value="selecione">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <label for="disponibilidade">Disponibilidade:</label>
+            <textarea id="disponibilidade" name="disponibilidade" rows="4" cols="50"
+                placeholder="Descreva sua disponibilidade (dias, horários, etc.)"></textarea>
+
+            <button class="botao-enviar" type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contato">
+                <h3>Contato</h3>
+                <p><strong>Email:</strong> contato@reconhecerecuidar.org.br</p>
+                <p><strong>Telefone:</strong> (83) 99999-0000</p>
+            </div>
+            <div class="footer-links">
+
+                <ul>
+                    <li><a href="index.htm">Início</a></li>
+                    <li><a href="projetos.html">Projeto</a></li>
+                    <li><a href="cadastro.html">Seja Voluntário</a></li>
+                    <li><a href="projetos.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-redes-sociais">
+                <h3>Siga-nos</h3>
+                <a href="#"><img src="logo/facebook.webp" alt="Logo do Facebook" width="40"></a>
+                <a href="#"><img src="logo/instagram.png" alt="Logo do Instagram" width="40"></a>
+                <a href="#"><img src="logo/Xt.jpg" alt="Logo do Twitter/X" width="40"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ONG Reconhecer e Cuidar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
