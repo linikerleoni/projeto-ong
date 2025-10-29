@@ -129,6 +129,8 @@ function setupFormValidation() {
     }
 
     form.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+        
         console.log("Formulário enviado, validando...");
 
         const errors = [];
@@ -149,8 +151,6 @@ function setupFormValidation() {
         }
 
         if (errors.length > 0) {
-            event.preventDefault();
-
             console.warn("Erros de validação:", errors);
             if (errorContainer) {
                 const ul = document.createElement('ul');
@@ -161,8 +161,16 @@ function setupFormValidation() {
                 });
                 errorContainer.appendChild(ul);
             }
+        
         } else {
             console.log("Formulário válido. Enviando...");
+
+            alert('Obrigado! Seu cadastro foi enviado com sucesso.');
+
+            form.reset();
+
+            carregarConteudo('index.html');
+            history.pushState(null, '', 'index.html');
         }
     });
 }
