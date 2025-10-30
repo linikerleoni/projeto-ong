@@ -189,10 +189,10 @@ function renderizarProjetoDinamico() {
 
 
     const novoProjetoHTML = `
-    <article class="projeto-card projeto-card1" style="border: 3px dashed #008000;">
-        <h3>Adoção Virtual</h3>
+    <article class="projeto-card projeto-card1"
+        <h3><strong>Adoção Virtual</strong></h3>
         <p>
-        A Adoção Virtual é uma forma de ajudar mesmo à distância!
+        A adoção virtual é uma forma de ajudar mesmo à distância!
         Por meio desse projeto, você pode apadrinhar um cão ou gato resgatado, contribuindo mensalmente para seus cuidados com alimentação, vacinas e tratamentos veterinários.
         </p>
     </article>
@@ -202,3 +202,30 @@ function renderizarProjetoDinamico() {
 }
 
 console.log("main.js carregado e roteador SPA iniciado!");
+
+function inicializarModoEscuro() {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = "Claro"; 
+                toggleButton.setAttribute('aria-label', 'Alternar modo claro');
+            } else {
+                toggleButton.textContent = "Escuro"; 
+                toggleButton.setAttribute('aria-label', 'Alternar modo escuro');
+            }
+        });
+
+        
+        if (document.body.classList.contains('dark-mode')) {
+            toggleButton.textContent = "Claro";
+        } else {
+            toggleButton.textContent = "Escuro";
+        }
+    }
+}
+inicializarModoEscuro();
